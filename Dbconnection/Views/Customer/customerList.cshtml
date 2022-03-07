@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Dbconnection.Models.Customer>
+@{
+}
+@if (Model.Count() <= 0) 
+{ <p class="text-center text-danger">customer was not found at this location !</p>}
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td>@customer.Name></td>
+            <td>@customer.Email</td>
+        </tr>
+    }
+</table>
